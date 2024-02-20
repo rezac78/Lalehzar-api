@@ -21,6 +21,10 @@ const productSchema = new mongoose.Schema({
     type: String,
     required: [true, "Description is required"],
   },
+  price: {
+    type: String,
+    required: [true, "price is required"],
+  },
   hashtags: {
     type: [String],
     required: [true, "At least one hashtag is required"],
