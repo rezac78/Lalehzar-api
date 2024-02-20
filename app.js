@@ -52,7 +52,6 @@ app.get("/", (req, res) => {
 });
 app.use(cookieParser());
 app.use(errorHandler);
-app.use(limiter);
 // Data sanitization against NoSQL query injection
 app.use(sanitize);
 // Set various HTTP headers for security
