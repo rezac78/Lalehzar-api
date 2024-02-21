@@ -12,6 +12,7 @@ const errorHandler = require("./api/middlewares/errorHandler");
 const connectDB = require("./config/db");
 const authRoutes = require("./api/routes/authRoutes");
 const menuRoutes = require("./api/routes/menuRoutes");
+const searchRoutes = require("./api/routes/searchRoutes");
 // Create a Redis client
 const redisClient = redis.createClient({
   host: process.env.REDIS_HOST || "lalehzar-api-75mo.onrender.com", // Replace with your Redis server host
@@ -59,6 +60,7 @@ app.use(securityHeaders);
 // Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/menu", menuRoutes); // Menu-related routes
+app.use("/api/search", searchRoutes); //  Search-related routes
 // Select a port
 const PORT = process.env.PORT || 3000;
 
