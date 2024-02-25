@@ -3,7 +3,6 @@ const mongoose = require("mongoose");
 const productSchema = new mongoose.Schema({
   photo: {
     type: String,
-    required: [true, "Photo URL is required"],
     default:'https://res.cloudinary.com/dpr146vr2/image/upload/v1708409354/Lalehzar/w51pdunaeszzsmuzh2wp.webp',
     validate: {
       validator: function (value) {
